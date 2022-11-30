@@ -1,0 +1,93 @@
+<input [ngModel]="formText" class=" font-bold text-6xl text-right bg-neutral-100	w-1/3 h-28 border-4 border-black ..." type="text" >
+<div>
+  <button class="font-bold w-1/12 text-center text-3xl h-24 bg-neutral-300 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 hover:bg-neutral-400  duration-300" (click)="doUnaryOperation('percent')">
+    %
+  </button>
+  <button class="font-bold w-1/12 text-center text-3xl h-24 bg-neutral-300 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 hover:bg-neutral-400  duration-300" (click)="clear()">
+    CE
+  </button>
+  <button class="font-bold w-1/12 text-center text-3xl h-24 bg-neutral-300 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 hover:bg-neutral-400 duration-300" (click)="clear()">
+    C
+  </button>
+  <button class="font-bold w-1/12 text-center text-3xl h-24 bg-neutral-300 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 hover:bg-neutral-400  duration-300" (click)="delete('1')">
+      &#9587;
+  </button>
+
+
+
+</div>
+
+<div>
+  <button class="font-bold w-1/12 text-center text-3xl h-24 bg-neutral-300 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 hover:bg-neutral-400  duration-300" (click)="doUnaryOperation('reverse')">
+    1/x
+  </button>
+  <button class="font-bold w-1/12 text-center text-3xl h-24 bg-neutral-300 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 hover:bg-neutral-400  duration-300" (click)="doUnaryOperation('square')">
+    x <sup>2</sup>
+  </button>
+  <button class="font-bold w-1/12 text-center text-3xl h-24 bg-neutral-300 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 hover:bg-neutral-400  duration-300" (click)="doUnaryOperation('root')">
+    <span>
+            &#8730;x
+
+    </span>
+
+  </button>
+  <button class="font-bold w-1/12 text-center text-3xl h-24 bg-neutral-300 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 hover:bg-neutral-400  duration-300" (click)="doBinaryCalculations('divide')">
+    /
+  </button>
+</div>
+<div>
+  <button class="font-bold w-1/12 text-center text-3xl h-24 bg-neutral-200 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 hover:bg-neutral-300  duration-300" (click)="addDigit('7')">
+    7
+  </button>
+  <button class="font-bold w-1/12 text-center text-3xl h-24 bg-neutral-200 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 hover:bg-neutral-300  duration-300"(click)="addDigit('8')">
+    8
+  </button>
+  <button class="font-bold w-1/12 text-center text-3xl h-24 bg-neutral-200 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 hover:bg-neutral-300  duration-300"(click)="addDigit('9')">
+    9
+  </button>
+  <button class="font-bold w-1/12 text-center text-3xl h-24 bg-neutral-300 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 hover:bg-neutral-400  duration-300"(click)="doBinaryCalculations('multiple')" >
+    *
+  </button>
+</div>
+<div>
+  <button class="font-bold w-1/12 text-center text-3xl h-24 bg-neutral-200 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 hover:bg-neutral-300  duration-300"(click)="addDigit('4')">
+    4
+  </button>
+  <button class="font-bold w-1/12 text-center text-3xl h-24 bg-neutral-200 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 hover:bg-neutral-300  duration-300"(click)="addDigit('5')">
+    5
+  </button>
+  <button class="font-bold w-1/12 text-center text-3xl h-24 bg-neutral-200 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 hover:bg-neutral-300  duration-300"(click)="addDigit('6')">
+    6
+  </button>
+  <button class="font-bold w-1/12 text-center text-3xl h-24 bg-neutral-300 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 hover:bg-neutral-400  duration-300"(click)="doBinaryCalculations('subtract')">
+    -
+  </button>
+</div>
+<div>
+  <button class="font-bold w-1/12 text-center text-3xl h-24 bg-neutral-200 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 hover:bg-neutral-300  duration-300"(click)="addDigit('1')">
+    1
+  </button>
+  <button class="font-bold w-1/12 text-center text-3xl h-24 bg-neutral-200 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 hover:bg-neutral-300  duration-300"(click)="addDigit('2')">
+    2
+  </button>
+  <button class="font-bold w-1/12 text-center text-3xl h-24 bg-neutral-200 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 hover:bg-neutral-300  duration-300"(click)="addDigit('3')">
+    3
+  </button>
+  <button class="font-bold w-1/12 text-center text-3xl h-24 bg-neutral-300 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 hover:bg-neutral-400  duration-300"(click)="doBinaryCalculations('add')">
+    +
+  </button>
+</div>
+<div>
+  <button class="font-bold w-1/12 text-center text-3xl h-24 bg-neutral-200 rounded-bl-lg transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 hover:bg-neutral-300  duration-300"(click)="doUnaryOperation('convertSign')">
+    +/-
+  </button>
+  <button class="font-bold w-1/12 text-center text-3xl h-24 bg-neutral-200 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 hover:bg-neutral-300  duration-300"(click)="addDigit('0')">
+    0
+  </button>
+  <button class="font-bold w-1/12 text-center text-3xl h-24 bg-neutral-200 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 hover:bg-neutral-300  duration-300"(click)="addDigit('D')">
+    .
+  </button>
+  <button class="font-bold w-1/12 text-center text-3xl h-24 bg-blue-300 rounded-br-lg transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 hover:bg-blue-400  duration-300"(click)="doBinaryCalculations('equal')">
+    =
+  </button>
+</div>
